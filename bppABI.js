@@ -55,37 +55,6 @@ var ABI = [
 		"type": "event"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "to",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "tokenId",
-				"type": "uint256"
-			}
-		],
-		"name": "approve",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_mintAmount",
-				"type": "uint256"
-			}
-		],
-		"name": "mint",
-		"outputs": [],
-		"stateMutability": "payable",
-		"type": "function"
-	},
-	{
 		"anonymous": false,
 		"inputs": [
 			{
@@ -103,165 +72,6 @@ var ABI = [
 		],
 		"name": "OwnershipTransferred",
 		"type": "event"
-	},
-	{
-		"inputs": [],
-		"name": "renounceOwnership",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "from",
-				"type": "address"
-			},
-			{
-				"internalType": "address",
-				"name": "to",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "tokenId",
-				"type": "uint256"
-			}
-		],
-		"name": "safeTransferFrom",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "from",
-				"type": "address"
-			},
-			{
-				"internalType": "address",
-				"name": "to",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "tokenId",
-				"type": "uint256"
-			},
-			{
-				"internalType": "bytes",
-				"name": "_data",
-				"type": "bytes"
-			}
-		],
-		"name": "safeTransferFrom",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "operator",
-				"type": "address"
-			},
-			{
-				"internalType": "bool",
-				"name": "approved",
-				"type": "bool"
-			}
-		],
-		"name": "setApprovalForAll",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_cost",
-				"type": "uint256"
-			}
-		],
-		"name": "setCost",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "_receiver",
-				"type": "address"
-			},
-			{
-				"internalType": "uint96",
-				"name": "_royaltyPercent",
-				"type": "uint96"
-			}
-		],
-		"name": "setDefaultRoyalty",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_timestamp",
-				"type": "uint256"
-			}
-		],
-		"name": "setEndOfEarlyCost",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address[]",
-				"name": "_interactionAddresses",
-				"type": "address[]"
-			}
-		],
-		"name": "setInteractionPercentMatrix",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "bool",
-				"name": "_state",
-				"type": "bool"
-			}
-		],
-		"name": "setPaused",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "_uriPrefix",
-				"type": "string"
-			}
-		],
-		"name": "setUriPrefix",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
 	},
 	{
 		"anonymous": false,
@@ -292,11 +102,6 @@ var ABI = [
 		"inputs": [
 			{
 				"internalType": "address",
-				"name": "from",
-				"type": "address"
-			},
-			{
-				"internalType": "address",
 				"name": "to",
 				"type": "address"
 			},
@@ -306,27 +111,7 @@ var ABI = [
 				"type": "uint256"
 			}
 		],
-		"name": "transferFrom",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "newOwner",
-				"type": "address"
-			}
-		],
-		"name": "transferOwnership",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "withdraw",
+		"name": "approve",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -516,6 +301,25 @@ var ABI = [
 		"type": "function"
 	},
 	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_address",
+				"type": "address"
+			}
+		],
+		"name": "isMember",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
 		"inputs": [],
 		"name": "leftOverGoldSupply",
 		"outputs": [
@@ -581,6 +385,19 @@ var ABI = [
 		"type": "function"
 	},
 	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_mintAmount",
+				"type": "uint256"
+			}
+		],
+		"name": "mint",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
 		"inputs": [],
 		"name": "name",
 		"outputs": [
@@ -640,15 +457,9 @@ var ABI = [
 	},
 	{
 		"inputs": [],
-		"name": "percent",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
+		"name": "renounceOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
@@ -683,6 +494,158 @@ var ABI = [
 	{
 		"inputs": [
 			{
+				"internalType": "address",
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			}
+		],
+		"name": "safeTransferFrom",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bytes",
+				"name": "_data",
+				"type": "bytes"
+			}
+		],
+		"name": "safeTransferFrom",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "operator",
+				"type": "address"
+			},
+			{
+				"internalType": "bool",
+				"name": "approved",
+				"type": "bool"
+			}
+		],
+		"name": "setApprovalForAll",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_cost",
+				"type": "uint256"
+			}
+		],
+		"name": "setCost",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_receiver",
+				"type": "address"
+			},
+			{
+				"internalType": "uint96",
+				"name": "_royaltyPercent",
+				"type": "uint96"
+			}
+		],
+		"name": "setDefaultRoyalty",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_timestamp",
+				"type": "uint256"
+			}
+		],
+		"name": "setEndOfEarlyCost",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address[]",
+				"name": "_interactionAddresses",
+				"type": "address[]"
+			}
+		],
+		"name": "setInteractionPercentMatrix",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bool",
+				"name": "_state",
+				"type": "bool"
+			}
+		],
+		"name": "setPaused",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_uriPrefix",
+				"type": "string"
+			}
+		],
+		"name": "setUriPrefix",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
 				"internalType": "bytes4",
 				"name": "interfaceId",
 				"type": "bytes4"
@@ -707,19 +670,6 @@ var ABI = [
 				"internalType": "string",
 				"name": "",
 				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "ta",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
@@ -777,6 +727,42 @@ var ABI = [
 		"type": "function"
 	},
 	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			}
+		],
+		"name": "transferFrom",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "transferOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
 		"inputs": [],
 		"name": "uriPrefix",
 		"outputs": [
@@ -819,6 +805,13 @@ var ABI = [
 			}
 		],
 		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "withdraw",
+		"outputs": [],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	}
 ]
